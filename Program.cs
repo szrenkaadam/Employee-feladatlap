@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -41,11 +40,32 @@ namespace Employee_feladatlap
             {
                 if (alkalmazott[i].Age > legidosebbKora)
                 {
-
+                    legidosebbKora = alkalmazott[i].Age;
                 }
             }
-            
+
             return legidosebbKora;
+        }
+        //11
+
+        static void HarmincEvFolotti(List<Alkalmazottak> alkalmazott)
+        {
+            string nev = string.Empty;
+            string eldontes = string.Empty;
+            string[] nevek = new string[20];
+            for (int i = 0; i < alkalmazott.Count; i++)
+            {
+                if (alkalmazott[i].Age > 30)
+                {
+                     eldontes = "Van 30 év feletti alkalmazott";
+                    
+                    foreach (var item in nevek)
+                    {
+
+                    }
+                }
+            }
+            Console.WriteLine(eldontes);
         }
 
         static void Main(string[] args)
@@ -78,11 +98,12 @@ namespace Employee_feladatlap
 
 
             //10. Függvény segítségével keresd ki, majd a virtuális metódus segítségével írd ki a legidősebb személy adatait.
-            
+            int legidosebb = LegidosebbAlkalmazott(alkalmazott);
+            Console.WriteLine($"A legidősebb számontartott alkalmazott kora: {legidosebb} év");
 
 
             //11. Függvény segítségével döntsd el, majd a főprogramban írd ki, hogy van-e 30 év fölötti személy, és emellett írd ki a nevét is. (Ez a függvény tehát két értéket kell, hogy generáljon, ezt egyetlen szövegként add vissza a főprogramnak, és a főprogram bontsa szét az adatokat, majd utána írja ki.)
-
+            HarmincEvFolotti(alkalmazott);
             //12. Függvénnyel válogasd ki azon személyek nevét egy új tömbbe(nem listába), akik 30 évnél fiatalabbak.Ennek a tömbnek a hasznos tartalmát írd ki a főprogramban.
 
             //13. Egyetlen függvénnyel keresd meg a legfiatalabb és a legidősebb személyt. A függvénynek legyen két olyan paramétere, amiben az eredményt vissza lehet juttatni a főprogramba, és ott ki lehet írni a nevüket és a korukat. A függvény visszatérési értéke pedig képes legyen azt jelezni, hogy van-e több ugyanolyan korú legfiatalabb személy.
