@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Employee_feladatlap
 {
-    class Alkalmazottak
+    class Alkalmazott
     {
         //name, age, city, department, position, gender, marital status, salary
         public string Name { get; set; }
@@ -18,7 +18,7 @@ namespace Employee_feladatlap
         public string Marital { get; set; }
         public int Salary { get; set; }
 
-        public Alkalmazottak(string sor)
+        public Alkalmazott(string sor)
         {
             string[] valami = sor.Split(';');
 
